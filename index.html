@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Gestión de Proyetos</title>
+
+    <style>
+
+        /* ==========================================================================
+   1. ESTILOS GENERALES Y LAYOUT
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f3e8ff 0%, #e0f2fe 100%);
+  background-color: #2d1b45;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Barra lateral de navegación (Sidebar) */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #2e1065 0%, #4c1d95 55%, #6d28d9 100%);
+  color: #fff;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #34495e;
+  padding-bottom: 10px;
+  color: #ecf0f1;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 12px;
+}
+
+.sidebar a {
+  color: #bdc3c7;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+  color: #fff;
+}
+
+/* Área principal de contenido */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+header {
+  margin-bottom: 25px;
+  background: linear-gradient(120deg, #6d28d9, #db2777);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(109, 40, 217, 0.25);
+}
+
+header h1 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  color: #fbcfe8;
+}
+
+/* Tarjetas y Contenedores */
+.section-card {
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(109, 40, 217, 0.1);
+}
+
+.section-card h2 {
+  color: #4c1d95;
+  margin-bottom: 15px;
+  border-left: 4px solid #db2777;
+  padding-left: 10px;
+}
+
+/* Grid para las Herramientas y Técnicas */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.grid-card {
+  border: 1px solid #f0d9ff;
+  border-radius: 6px;
+  padding: 15px;
+  background: linear-gradient(160deg, #fdf4ff 0%, #f5f3ff 100%);
+}
+
+.grid-card h3 {
+  color: #9d174d;
+  margin-bottom: 8px;
+}
+
+.grid-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.grid-servicios{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 40px;
+        padding: 20px;
+    }
+
+/* Estilos para Glosario / Definiciones */
+.glossary-item {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e9d5ff;
+}
+
+.glossary-item:last-child {
+  border-bottom: none;
+}
+
+.glossary-term {
+  font-weight: bold;
+  color: #6d28d9;
+}
+
+/* Etiquetas/Badges para categorías */
+.tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #f0abfc, #a78bfa);
+  color: #3b0764;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-top: 8px;
+  font-weight: bold;
+
+}
+
+ .tarjeta-servicio p{
+        margin: 0;
+        font-size: 0.9rem;
+        color: #3b0764;
+        line-height: 1.5;
+        
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Barra de menu lateral-->
+     <nav class="sidebar">
+        <h2>GP Dashboard</h2>
+        <ul>
+            <li><a href="#definiciones">1.Definiciones</a></li>
+            <li><a href="#herramientas">2.Herramientas</a></li>
+            <li><a href="#tecnicas">3.Tecnicas</a></li>
+            <li><a href="#proyecto">4.Proyecto/Talleres</a></li>
+        </ul>
+     </nav>
+
+    <!-- Contenido principal-->
+     <main class="content">
+        <header>
+            <h1>Dashboard del Estudiante: Gestión de Proyectos</h1>
+            <p>Espacio de consulta de conceptos, herramientas y técnicas</p>
+        </header>
+
+        <!--Seccion 1: Definiciones-->
+        <section id="definiciones" class="section-card">
+            <h2>Definiciones Fundamentales</h2>
+            
+        <!--Estructura para agregar definiciones-->
+        
+        <div class="glossary-item">
+            <p class="glossary-term"></p>
+            <h4>¿Que es un proyecto?</h4>
+            <p>Un proyecto es un esfuerzo temporal que busca crear valor mediante un producto, servicio o resultado único. </p>
+        </div>
+
+        <div class="glossary-item">
+            <p class="glossary-term"></p>
+            <h4>Características de los proyectos</h4>
+            <p>Son temporales, tienen objetivos definidos, un equipo, presupuesto y cronograma.</p>
+        </div>
+
+        <div class="glossary-item">
+            <p class="glossary-term"></p>
+            <h4>Proyectos Vs Operaciones</h4>
+            <p>Los proyectos son temporales y únicos; las operaciones son actividades rutinarias y continuas.</p>
+        </div>
+
+        <div class="glossary-item">
+            <p class="glossary-term"></p>
+            <h4>Habilidades del gerente de proyectos</h4>
+            <p>Liderazgo, comunicación, colaboración, negociación, análisis, resolución de conflictos y motivación.</p>
+        </div>
+
+        <div class="glossary-item">
+            <p class="glossary-term"></p>
+            <h4>Plan de proyecto</h4>
+            <p>Guía que organiza los elementos necesarios para gestionar y desarrollar un proyecto.</p>
+        </div>
+
+            
+    <div>
+        <h2>Principios Dirección de Proyectos</h2>
+    </div>
+    
+    
+    <div class="grid-servicios">
+
+    <article class="tarjeta-servicio">
+        <h3>Adoptar una visión holística</h3>
+        <br>
+        <p>Entender que un proyecto forma parte de un ecosistema más amplio y que debe integrarse con los sistemas, la organización y los usuarios, considerando cómo sus componentes se relacionan entre sí.</p>
+        </article>
+    
+    <article class="tarjeta-servicio">
+        
+        <h3>Enfocarse en el valor</h3>
+        <br>
+        <p>Priorizar los resultados que generan beneficios tangibles y resuelven las necesidades reales del usuario, en lugar de limitarse a cumplir el alcance y las fechas establecidas.</p>
+        </article>
+
+    <article class="tarjeta-servicio">
+        
+        <h3>Incorporar la calidad</h3>
+        <br>
+        <p>Integrar la calidad desde el inicio del proyecto mediante estándares, buenas prácticas, pruebas y revisiones continuas, en lugar de dejar su verificación únicamente para el final.</p>
+        </article>
+
+     <article class="tarjeta-servicio">
+        
+        <h3>Ser un líder responsable (Accountability)</h3>
+        <br>
+        <p>Asumir la responsabilidad por los resultados del proyecto, actuar con integridad, gestionar las dificultades y proteger al equipo para que pueda resolver los problemas de manera efectiva.</p>
+        </article>
+    
+    <article class="tarjeta-servicio">
+        
+        <h3>Integrar la sostenibilidad</h3>
+        <br>
+        <p>Considerar los impactos ambientales, sociales y económicos del proyecto, promoviendo soluciones tecnológicas eficientes, escalables y viables a largo plazo.</p>
+        </article>
+
+
+    <article class="tarjeta-servicio">
+        
+        <h3>Construir una cultura de empoderamiento</h3>
+        <br>
+        <p>Fomentar un entorno de confianza, autonomía y seguridad psicológica en el que los equipos puedan tomar decisiones, experimentar y aportar soluciones aprovechando sus conocimientos técnicos.</p>
+        </article>
+    
+</div>
+
+
+
+
+
+
+        
+        </section>
+
+        <!--Seccion 2: Herramientas-->
+        <section id="herramientas" class="section-card">
+            <h2>Herramientas de Gestión</h2>
+            <p>Herramientas de software para el control de proyectos</p>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <h3>Matriz de Poder e Interés</h3>
+                    <p>Herramienta visual para clasificar a los involucrados según su nivel de poder e interés en el proyecto.</p>
+                    <span class="tag">Gestión de involucrados</span>
+                    <button class="tag" onclick="window.location.href='plantillamatrizpoderinteres.html'">Ver Matriz de Poder e Interés</button>
+                </div>
+
+            </div>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <h3>Nombre de la herramienta</h3>
+                    <p>Descripción</p>
+                    <span class="tag">Area de conocimiento</span>
+                </div>
+
+            </div>
+
+
+        </section>
+
+    
+        <!--Seccion 3: Técnicas-->
+        <section id="tecnicas" class="section-card">
+            <h2>Técnicas y Marcos de Trabajo</h2>
+            <p>...</p>
+            <div class="grid-container">
+                <div class="grid-card">
+                    <h3>Nombre de la técnica</h3>
+                    <p>Descripción de la metodologia</p>
+                    <span class="tag">Enfoque</span>
+                </div>
+
+            </div>
+        </section>
+
+          <!--Seccion 4: Proyecto Curso-->
+        <section id="proyecto" class="section-card">
+            <h2>Proyecto desarrollado en clase</h2>
+            <p>Espacio para cargar evidencias de las actividades</p>
+            
+            <div class="glossary-item">
+                <p class="glossary-term">Nombre de la clase</p>
+                <p>Notas o enlaces a archivos o documentos</p>
+            </div>
+        </section>
+        
+
+
+
+     </main>
+</body>
+
+</html>
